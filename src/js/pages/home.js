@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store";
-import Card from "../components/card.js";
+import Card from "../component/card.js";
 
 export default function(props) {
 	const { store, actions } = useContext(Context);

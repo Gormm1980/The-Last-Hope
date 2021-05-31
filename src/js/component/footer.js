@@ -1,10 +1,17 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 
-export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
-);
+import { Context } from "../store";
+
+export default function(props) {
+    const {store, actions} = useContext(Context)
+
+    return (
+        <footer className="footer">
+            <div className="container mt-5">
+                <p>&copy; 2020. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    )
+}
+
+

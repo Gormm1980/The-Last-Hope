@@ -1,3 +1,49 @@
-/* 
-    General Styles
-*/
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+#button-info {
+    width: 120px;
+}
+
+.navbar-brand {
+    background-color: black; 
+}
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+.title {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: red;
+}
+.card-container {
+    overflow-y: scroll; 
+    height: auto;
+    display: flex;
+}
+.card {
+    min-width: 350px;
+    justify-content: space-between;
+    margin: 10px;
+}
+#button-info{
+    margin-top: 15px;
+}
+.card-img-top {
+    height: 150px;
+}
+.card-body {
+    height: 250px;
+}
+.heart {
+    margin-left: 120px;
+    color: yellow;
+    font-size: 34px;
+}
+h1{
+    margin-left: 50px;
+}
+.divider {
+    padding: 1px;
+    margin: 35px;
+}

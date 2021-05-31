@@ -1,45 +1,51 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
-import injectContext from "./store/appContext";
+import injectContext from "./store";
 
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+import Footer from "./components/footer.js";
+import Navbar from "./components/navbar.js";
 
-//create your first component
-const Layout = () => {
-	//the basename is used when your project is published in a subdirectory and not in the root of the domain
-	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
-	const basename = process.env.BASENAME || "";
+import Home from "./pages/home.js";
+import About from "./pages/about.js";
+import Contact from "./pages/contact.js";
+import Planets from "./pages/planets.js";
+import People from "./pages/people.js";
+import Species from "./pages/species.js";
 
+export default injectContext(function(props) {
 	return (
-		<div className="d-flex flex-column">
-			<BrowserRouter basename={basename}>
-				<ScrollToTop>
-					<Navbar />
-					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
-						<Route>
-							<h1>Not found!</h1>
-						</Route>
-					</Switch>
-					<Footer />
-				</ScrollToTop>
-			</BrowserRouter>
-		</div>
-	);
-};
+		<Router>
+			<Navbar />
 
-export default injectContext(Layout);
+			<div className="page">
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+
+					<Route path="/about">
+						<About />
+					</Route>
+
+					<Route path="/contact">
+						<Contact />
+					</Route>
+
+					<Route path="/people/:index">
+						<People />
+					</Route>
+
+					<Route path="/planets/:index">
+						<Planets />
+					</Route>
+					<Route path="/species/:index">
+						<Species />
+					</Route>
+				</Switch>
+			</div>
+
+			<Footer />
+		</Router>
+	);
+});
