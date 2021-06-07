@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import  Favorite  from "./favorite.js"
+import { Navbar } from "react-bootstrap";
 
-export default function(props) {
+function Navbar(props) {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container d-flex justify-content-between">
@@ -20,3 +21,4 @@ export default function(props) {
         </nav>
     )
 }
+export default Navbar;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store";
 import Card from "../component/card.js";
 
-export default function(props) {
+function Home(props) {
 	const { store, actions } = useContext(Context);
 
 	useEffect(() => {
@@ -48,3 +48,4 @@ export default function(props) {
 		</div>
 	);
 }
+export default Home;
