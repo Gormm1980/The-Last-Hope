@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/index.js";
 
-export default function(props) {
+function Heart(props) {
     const {store, actions} = useContext(Context);
     
     const handleClick = (event) => {
@@ -16,3 +16,4 @@ export default function(props) {
         <button  onClick= {handleClick} type="button" className="btn heart"><i className="far fa-heart"></i></button>
     )
 }
+export default Heart;

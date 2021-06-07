@@ -14,7 +14,7 @@ export default function(props) {
 		<div>
 			<div className="jumbotron-fluid mx-5 my-5 d-flex flex-row">
 				<div className="left-side d-inline-block">
-					<img src="https://picsum.photos/600/300?random=2" />
+					<img src="https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png" />
 				</div>
 				<div className="right-side d-inline-block">
 					<h1 className="text-center text-monospace">{person.name}</h1>

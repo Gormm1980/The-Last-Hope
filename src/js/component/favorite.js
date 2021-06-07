@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/index.js";
 
-export default function(props) {
+function Favorite (props) {
 
     const { store, actions } = useContext(Context);
     
@@ -35,4 +35,5 @@ export default function(props) {
     )  
 }
 
+export default Favorite;
 

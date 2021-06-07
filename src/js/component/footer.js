@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { Context } from "../store";
 
-export default function(props) {
+ function Footer(props) {
     const {store, actions} = useContext(Context)
 
     return (
@@ -14,4 +14,4 @@ export default function(props) {
     )
 }
 
-
+export default Footer;

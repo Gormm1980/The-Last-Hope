@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/index.js";
 
-export default function(props) {
+function Card(props) {
 	const { store, actions } = useContext(Context);
 
 	useEffect(
@@ -45,3 +45,4 @@ export default function(props) {
 		</div>
 	);
 }
+export default Card;

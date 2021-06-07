@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "bootstrap";
-import "./style.css";
+import "custom";
+import "./styles/index.scss";
 
 import layout from "./layout.js";
 
