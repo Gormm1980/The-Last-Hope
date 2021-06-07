@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import  Favorite  from "./favorite.js"
-import { Navbar } from "react-bootstrap";
 
 function Navbar(props) {
     return (

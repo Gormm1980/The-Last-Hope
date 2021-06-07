@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { Context } from "../store/index.js";
 
-export default function(props) {
+function Species(props) {
 	const params = useParams();
 	const { store, actions } = useContext(Context);
 
@@ -42,3 +42,4 @@ export default function(props) {
 		</div>
 	);
 }
+export default Species;

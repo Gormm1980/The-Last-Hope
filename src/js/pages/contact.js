@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function(props) {
+function Contact(props) {
 	return (
 		<div className="container">
 			<div className="jumbotron">
@@ -9,3 +9,4 @@ export default function(props) {
 		</div>
 	);
 }
+export default Contact;
