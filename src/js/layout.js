@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import injectContext from "./store";
+import injectContext from "./store/flux.js";
 
-import Footer from "./components/footer.js";
-import Navbar from "./components/navbar.js";
+import Footer from "./component/footer.js";
+import Navbar from "./component/navbar.js";
 
 import Home from "./pages/home.js";
 import About from "./pages/about.js";
 import Contact from "./pages/contact.js";
-import Planets from "./pages/planets.js";
+import Planet from "./pages/planet.js";
 import People from "./pages/people.js";
 import Species from "./pages/species.js";
 
-export default injectContext(function(props) {
+function Layout(props) {
 	return (
 		<Router>
 			<Navbar />
@@ -36,8 +36,8 @@ export default injectContext(function(props) {
 						<People />
 					</Route>
 
-					<Route path="/planets/:index">
-						<Planets />
+					<Route path="/planet/:index">
+						<Planet />
 					</Route>
 					<Route path="/species/:index">
 						<Species />
@@ -48,4 +48,5 @@ export default injectContext(function(props) {
 			<Footer />
 		</Router>
 	);
-});
+}
+export default Layout;

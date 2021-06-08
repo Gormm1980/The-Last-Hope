@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 
-import { Context } from "../store/index.js";
+import { Context } from "../store/appContext";
 
 function People(props) {
 	const params = useParams();

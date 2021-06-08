@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "bootstrap";
-import "custom";
-import "./styles/index.scss";
+import "../styles/index.scss";
 
-import layout from "./layout.js";
+import Layout from "./layout.js";
 
 const container = document.querySelector("#app");
-const component = <layout />;
+const component = <Layout />;
 
 ReactDOM.render(component, container);
