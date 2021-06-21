@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-import injectContext from "./store/flux.js";
+import injectContext from "./store/appContext.js";
 
 import Footer from "./component/footer.js";
 import Navbar from "./component/navbar.js";
@@ -49,4 +48,4 @@ function Layout(props) {
 		</Router>
 	);
 }
-export default Layout;
+export default injectContext(Layout);

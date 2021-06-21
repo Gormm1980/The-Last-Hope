@@ -1,12 +1,11 @@
-function flux({ getStore, getActions, setStore }) {
+function getState({ getStore, getActions, setStore }) {
 	return {
 		store: {
-			loading: false,
+			loading: true,
 			people: [],
 			planets: [],
 			species: [],
-			favorites: new Set([])
-			// new Set([]) elimino los duplicados de favorites.
+			favorites: []
 		},
 		actions: {
 			getPeople() {
@@ -21,6 +20,7 @@ function flux({ getStore, getActions, setStore }) {
 							return response.json();
 						})
 						.then(json => {
+							console.log("@@@@", json.results);
 							setStore({ people: json.results });
 						});
 				}
@@ -59,7 +59,7 @@ function flux({ getStore, getActions, setStore }) {
 			},
 			getFavorites() {
 				const store = getStore();
-				return [...store.favorites];
+				return store.favorites;
 				//[... convierte un set en un array] lo devuelve como elemento coma elemento coma elemento
 			},
 
@@ -85,4 +85,4 @@ function flux({ getStore, getActions, setStore }) {
 		}
 	};
 }
-export default flux;
+export default getState;

@@ -83,6 +83,7 @@
 		"popper.js": "^1.16.1",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
+		"react-app-rewired": "^2.1.8",
 		"react-bootstrap": "^1.6.0",
 		"react-bootstrap-validation": "^0.1.11",
 		"react-dom": "^16.8.4",
