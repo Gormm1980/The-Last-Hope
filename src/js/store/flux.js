@@ -20,7 +20,6 @@ function getState({ getStore, getActions, setStore }) {
 							return response.json();
 						})
 						.then(json => {
-							console.log("@@@@", json.results);
 							setStore({ people: json.results });
 						});
 				}
@@ -59,21 +58,17 @@ function getState({ getStore, getActions, setStore }) {
 			},
 			getFavorites() {
 				const store = getStore();
-				return store.favorites;
-				//[... convierte un set en un array] lo devuelve como elemento coma elemento coma elemento
+				return [...store.favorites];
 			},
 
-			addFavorites(favorite_name) {
-				const store = getStore();
-				store.favorites.add(favorite_name);
-				//no va con push porque no es un array, es un set y no puede ir con push
-				setStore({ favorites: store.favorites });
+			addFavorites(favorite) {
+				if (!getStore().favorites.includes(favorite))
+					setStore({ favorites: [...getStore().favorites, favorite] });
 			},
 
 			deleteFavorites(favorite_name) {
-				const store = getStore();
-				store.favorites.delete(favorite_name);
-				setStore({ favorites: store.favorites });
+				if (getStore().favorites.includes(favorite))
+					setStore({ favorites: [...getStore().favorites, favorite] });
 			},
 			setLoading(status) {
 				setStore({ loading: status });

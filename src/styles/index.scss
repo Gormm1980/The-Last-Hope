@@ -1,5 +1,6 @@
 
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
 #button-info {
     width: 120px;
 }
@@ -25,6 +26,7 @@
     min-width: 350px;
     justify-content: space-between;
     margin: 10px;
+    background-color:#d3d3d3 ;
 }
 #button-info{
     margin-top: 15px;
@@ -37,8 +39,10 @@
 }
 .heart {
     margin-left: 120px;
-    color: yellow;
+    color: red;
     font-size: 34px;
+    &.red{background-color: red;}
+    &.inactive {background-color: gray};
 }
 h1{
     margin-left: 50px;
