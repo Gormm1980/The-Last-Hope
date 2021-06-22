@@ -8,8 +8,6 @@ function Species(props) {
 	const { store, actions } = useContext(Context);
 
 	let specie = store.species[params.index];
-	// store.people te lleva a los personajes
-	// [params.index] te da la posicion del personaje selccionado en la card que has pinchado
 
 	return (
 		<div>

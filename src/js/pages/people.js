@@ -8,8 +8,7 @@ function People(props) {
 	const { store, actions } = useContext(Context);
 
 	let person = store.people[params.index];
-	// store.people te lleva a los personajes
-	// [params.index] te da la posicion del personaje selccionado en la card que has pinchado
+
 	return (
 		<div>
 			<div className="jumbotron-fluid mx-5 my-5 d-flex flex-row">
