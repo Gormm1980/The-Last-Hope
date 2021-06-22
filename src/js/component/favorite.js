@@ -15,7 +15,6 @@ function Favorites(props) {
 		},
 		[store.favorites]
 	);
-	// renderiza solo cuando cambie store.favorites. Si el array está vacío se dice que no tiene dependencias
 
 	return (
 		<div className="dropdown">
@@ -31,7 +30,7 @@ function Favorites(props) {
 			<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 				{actions.getFavorites().map((fav, index) => {
 					return (
-						<a className="dropdown-item" key={index} href="#">
+						<a className="dropdown-item" key={index} href="/store/flux.js">
 							{fav}
 							<button
 								onClick={() => actions.deleteFavorites(fav)}

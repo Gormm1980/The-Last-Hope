@@ -13,7 +13,6 @@ function Heart(props) {
 
 	const handleClick = () => {
 		actions.addFavorites(props.name);
-		// console.log("props.name. ", props.name);
 		console.log("store.favorites: ", store.favorites);
 	};
 	return (
