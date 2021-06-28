@@ -61,18 +61,19 @@ function getState({ getStore, getActions, setStore }) {
 				return [...store.favorites];
 			},
 
-			addFavorites(favorite) {
-				if (!getStore().favorites.includes(favorite))
-					setStore({ favorites: [...getStore().favorites, favorite] });
+			addFavorites(favorite_name) {
+				const store = getStore();
+				setStore({ favorites: [...store.favorites, favorite_name] });
 			},
 
 			deleteFavorites(favorite_name) {
-				if (getStore().favorites.includes(favorite))
-					setStore({ favorites: [...getStore().favorites, favorite] });
+				const store = getStore();
+				setStore({ favorites: store.favorites.filter(item => item != favorite_name) });
 			},
 			setLoading(status) {
 				setStore({ loading: status });
 			},
+
 			toggleLoader() {
 				const store = getStore();
 				setStore({ loading: !store.loading });

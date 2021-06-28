@@ -4,20 +4,20 @@ import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 
 function Heart(props) {
-	const [active, setActive] = React.useState("Heart inactive");
-	function changeRed() {
-		setActive("Heart red");
-	}
-	const { store, actions } = useContext(Context);
-	console.log(props);
+	const [active, setActive] = useState(false);
 
-	const handleClick = () => {
-		actions.addFavorites(props.name);
-		console.log("store.favorites: ", store.favorites);
-	};
+	const { store, actions } = useContext(Context);
+	// console.log(props);
+
 	return (
-		<button onClick={(handleClick, changeRed)} type="button" className="btn heart">
-			<i className="far fa-heart" />
+		<button
+			onClick={e => {
+				actions.addFavorites(props.name);
+				setActive(!active);
+			}}
+			type="button"
+			className="btn heart">
+			<i className={"far fa-heart " + (active ? "active" : "inactive")} />
 		</button>
 	);
 }

@@ -19,11 +19,7 @@ function Navbar(props) {
 					</Link>
 				</span>
 
-				<Favorite>
-					<Link to="/Heart.js">
-						<button onClick={handleClick} type="button" />
-					</Link>
-				</Favorite>
+				<Favorite />
 			</div>
 		</nav>
 	);

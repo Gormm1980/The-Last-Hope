@@ -37,12 +37,12 @@
 .card-body {
     height: 250px;
 }
-.heart {
+.fa-heart  {
     margin-left: 120px;
     color: red;
     font-size: 34px;
-    &.red{background-color: red;}
-    &.inactive {background-color: gray};
+    &.active{color: red;}
+    &.inactive {color: gray};
 }
 h1{
     margin-left: 50px;

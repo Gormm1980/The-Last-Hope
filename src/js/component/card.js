@@ -7,6 +7,7 @@ import Favorites from "./favorite.js";
 
 function Card(props) {
 	const { store, actions } = useContext(Context);
+	console.log(props);
 
 	return (
 		<div className="card">
@@ -20,12 +21,13 @@ function Card(props) {
 				<Link className="btn btn-outline-primary" id="button-info">
 					Learn More!
 				</Link>
-				<Heart />
+				<Heart name={props.favorite} />
 			</div>
 		</div>
 	);
 }
 Card.propTypes = {
-	children: PropTypes.array
+	children: PropTypes.array,
+	favorite: PropTypes.string
 };
 export default Card;
